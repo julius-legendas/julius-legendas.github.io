@@ -4,140 +4,152 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testando Lives</title>
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <title>Open TV</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 </head>
-<body>
+<body style="background-color: darkorchid;">
 
-    <!-- Sbt
-    <iframe src="https://www.youtube.com/embed/ABVQXgr2LW4?controls=1&enablejsapi=1&rel=0&showinfo=0&autoplay=0&mute=0&modestbranding=1&embed_config=%7B%22autonavRelatedVideos%22%3Afalse%2C%22disableRelatedVideos%22%3Atrue%2C%22hideInfoBar%22%3Atrue%2C%22primaryThemeColor%22%3A%22%22%2C%22relatedChannels%22%3A%5B%5D%2C%22relatedVideos%22%3A%5B%5D%2C%22adsConfig%22%3A%7B%22adTagParameters%22%3A%7B%22iu%22%3A%22%2F1011235%2FSBT_Videos%2FEspeciais%2FSBT_Live%2Fvideo%22%2C%22cust_params%22%3A%22%22%2C%22ppid%22%3A%22%22%2C%22pp%22%3A%22%22%7D%2C%22disableAds%22%3Afalse%2C%22nonPersonalizedAd%22%3Afalse%7D%7D&origin=https%3A%2F%2Fwww.sbt.com.br&widgetid=1" frameborder="0"></iframe>
-    Rede Brasil
-    <iframe src="https://player.logicahost.com.br/player.php?player=2" frameborder="0"></iframe>
-    Canção Nova
-    <iframe width="1343" height="497" src="https://www.youtube.com/embed/-IdYYo68_to" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
-    <!-- Terra Viva 
-    <iframe src="https://player.band.com.br/aovivo/default_terraviva.asp?transmissao=terraviva-iptv" frameborder="0"></iframe>
-    Tv Diarío
-    <iframe src="https://www.dailymotion.com/embed/video/x7txn7q?autoplay=1" frameborder="0"></iframe>
-    Agro+
-    <iframe src="https://player.band.com.br/aovivo/?transmissao=agromais" frameborder="0"></iframe>
-    TCM (Mossoró)
-    <iframe src="https://live.tcm10.com.br/player.html" frameborder="0"></iframe>
-    Tv Evangelizar
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZYrkO_Rrmtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    Tv Nordestina
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/YwQileJ37GQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
-    <!-- Tv Justiça
-    <iframe src="https://www.youtube.com/embed/live_stream?channel=UC0qlZ5jxxueKNzUERcrllNw" frameborder="0"></iframe>
-    RIT
-    <iframe src="https://www.youtube.com/embed/live_stream?channel=UCA0bOG0NUfJ855eDtHSxOkw" frameborder="0"></iframe>
-    Tv a critica (sikeira junior top)
-    <iframe src="https://www.youtube.com/embed/live_stream?channel=UCnLSKfHkgZ6ujEYCO9jq7Sw" frameborder="0"></iframe>
-    Tv Horizonte
-    <iframe src="https://www.youtube.com/embed/live_stream?channel=UCT0Iydn4wTm3_XCXKJfcrTA" frameborder="0"></iframe>
-    Radio Tupi
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/FPfg8iABK4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    Radio CBN 
-    <iframe src="https://www.youtube.com/embed/live_stream?channel=UCbiGwU0-W1XCDUrt3BTVrag" frameborder="0"></iframe> -->
+  <!-- Canal ao vivo -->
+  <div class="container">
+    <div class="embed-responsive embed-responsive-21by9">
+      <iframe id="live" class="embed-responsive-item" src="https://www.youtube.com/embed/live_stream?channel=UCuiLR4p6wQ3xLEm15pEn1Xw&autoplay=true&mute=true&showinfo=false" allowfullscreen></iframe>
+    </div>
+    <!-- Qual Canal a pessoa está vendo? -->
+    <div class="mx-auto row bg-info">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <h4 class="text-center text-danger font-weight-bold">Você está assistindo agora:</h4>
+        <h1 id="agora" class="text-center font-weight-bold text-dark">Record News</h1>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
 
 
-    <!-- Record News
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZZfVgVnnUpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    RBC (canal de igreja)
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/qF2J9A4YRi0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    Shoptime
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZC0_rKob80I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    Euronews
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VOw7bts_rGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    Cartoon Network
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/MAArSxA1GCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    Tv Aparecida
-    <iframe width="560" height="315" src="https://player.jmvstream.com/lvw/J26I8b4vr8H6MluwrZ7FvgEBC74Lca" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-    Rede Vida
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=UC-imeT_wWRmrpeYnhVX4r_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-    TV Brasil
-    <iframe src="https://aovivo.ebc.com.br/embed-tvbrasil.html" frameborder="0"></iframe>
-    Tv Cultura
-    <iframe src="https://www.dailymotion.com/embed/video/k5gtQySjwe85eTwnvD6?autoplay=1&queue-enable=false&muted=true" frameborder="0"></iframe>
-    Tv Univesp
-    <iframe width="775" height="420" src="https://www.youtube.com/embed/live_stream?channel=UCBL2tfrwhEhX52Dze_aO3zA" frameborder="0" allowfullscreen=""></iframe>
-    Band
-    <iframe _ngcontent-sc83="" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="" src="https://player.band.com.br/aovivo/?transmissao=band"></iframe>  -->
+    <div class="row mx-auto">
+      <article class="col-md-3 bg-warning">
+        <h3>Seja bem vindo a:</h3>
+        <img src="imgs/OpenTV.png" height="" width="100%" alt="">
+        <p>Aqui, você encontra um catalogo com mais de 40 canais ao vivo, de graça, e o melhor de tudo: <strong>Sem anúncios e 100% legal.</strong></br>Esqueça os planos abusivos das operadoras, e desfrute de um bom canal de tv!!!</p>
+      </article>
+      <section class="col-md-9 bg-dark">
+        <h2 class="text-warning">Principais Canais</h2>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/ABVQXgr2LW4" title="SBT"><img src="imgs/sbt.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://player.band.com.br/aovivo/?transmissao=band" title="BAND"><img src="imgs/band.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.dailymotion.com/embed/video/k5gtQySjwe85eTwnvD6?autoplay=1&queue-enable=false&muted=true" title="TV Cultura"><img src="imgs/cultura.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/ZZfVgVnnUpo" title="Record News"><img src="imgs/recordnews.png" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://aovivo.ebc.com.br/embed-tvbrasil.html" title="TV Brasil"><img src="imgs/brasil.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/MAArSxA1GCQ" title="Cartoon Network"><img src="imgs/cn.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UCvdwhh_fDyWccR42-rReZLw&autoplay=true&mute=true&showinfo=false" title="CNN"><img src="imgs/cnn.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://pluto.tv/live-tv/mtv-pluto-tv1" title="MTV"><img src="imgs/mtv.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://pluto.tv/live-tv/paramount-apresenta" title="Paramount+"><img src="imgs/paramount.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://pluto.tv/live-tv/nick-classico-ptv1" title="Nickelodeon Classicos"><img src="imgs/nick.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UCP391YRAjSOdM_bwievgaZA&autoplay=true&mute=true&showinfo=false" title="Jovem Pan News"><img src="imgs/jovemnews.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UCv-Nx8pSfG_LxbViMz14RWQ&autoplay=true&mute=true&showinfo=false" title="Jovem Pan Esportes"><img src="imgs/jovemesportes.jpg" alt="" class="img-fluid"></button>
+        <h2 class="text-warning">Canais Abertos</h2>
+        <button class="btn btn-dark" name="https://www.youtube.com/embed/ABVQXgr2LW4" title="SBT"><img src="imgs/sbt.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://player.band.com.br/aovivo/?transmissao=band" title="BAND"><img src="imgs/band.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.dailymotion.com/embed/video/k5gtQySjwe85eTwnvD6?autoplay=1&queue-enable=false&muted=true" title="TV Cultura"><img src="imgs/cultura.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="http://player.logicahost.com.br/player.php?player=377" title="TV Pampa"><img src="imgs/pampa.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.dailymotion.com/embed/video/x7txn7q?autoplay=1" title="TV Diario"><img src="imgs/diario.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://player.logicahost.com.br/player.php?player=2" title="Rede Brasil"><img src="imgs/redebrasil.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UC1pXFbM6hPRkUUTeO3txrtw&autoplay=true&mute=true&showinfo=false" title="TV Nordestina"><img src="imgs/nordestina.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UCnLSKfHkgZ6ujEYCO9jq7Sw&autoplay=true&mute=true&showinfo=false" title="TV A Crítica"><img src="imgs/critica.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://playerv.videovox.pw/video/edoardo5672/1/true/false/serv3.videovox.pw/4:3/" title="TV Tiradentes"><img src="imgs/tiradentes.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://player.jmvstream.com/lvw/fMOAsM9755sRSIQBsLydEMR3MQMhns" title="Bah TV"><img src="imgs/bah.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="http://www.tvuplay.tv.br/" title="TV Urbana"><img src="imgs/urbana.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://live.tcm10.com.br/player.html" title="TCM 10"><img src="imgs/tcm.png" alt="" class="img-fluid"></button>
+        <h2 class="text-warning">Canais Infantis</h2>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/MAArSxA1GCQ" title="Cartoon Network"><img src="imgs/cn.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://pluto.tv/live-tv/nick-classico-ptv1" title="Nickelodeon Classicos"><img src="imgs/nick.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://pluto.tv/live-tv/nick-jr-club-1" title="Nick JR. Club"><img src="imgs/nickjr.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://pluto.tv/live-tv/babyfirst-ptv1" title="Babyfirst"><img src="imgs/baby.png" alt="" class="img-fluid"></button>
+        <h2 class="text-warning">Séries e variedades</h2>
+          <button class="btn btn-dark" name="https://pluto.tv/live-tv/paramount-apresenta" title="Paramount+"><img src="imgs/paramount.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://pluto.tv/live-tv/mtv-pluto-tv1" title="MTV"><img src="imgs/mtv.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://pluto.tv/live-tv/bet-pluto-tv-ptv1" title="BET"><img src="imgs/bet.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://pluto.tv/live-tv/tastemade-ptv2" title="Tastemade Brasil"><img src="imgs/tastemade.png" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://pluto.tv/live-tv/fashionbox" title="Fashion Box"><img src="imgs/moda.png" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://pluto.tv/live-tv/loupe-ptv2" title="Loupe"><img src="imgs/loupe.jpg" alt="" class="img-fluid"></button>
+        <h2 class="text-warning">Canais Públicos e de Cortesia</h2>
+          <button class="btn btn-dark" name="https://aovivo.ebc.com.br/embed-tvbrasil.html" title="TV Brasil"><img src="imgs/brasil.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UC0qlZ5jxxueKNzUERcrllNw&autoplay=true&mute=true&showinfo=false" title="TV Justiça"><img src="imgs/justiça.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UCNY8yHMcFg0jLt0xJWCfuGA&autoplay=true&mute=true&showinfo=false" title="TV Mega"><img src="imgs/mega.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/ZC0_rKob80I" title="Shoptime"><img src="imgs/shoptime.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://player.twitch.tv/?channel=tvterradosol&parent=(COLOQUE O ENDEREÇO DO SITE)&muted=true" title="TV Terra do Sol"><img src="imgs/sol.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://eduplay.rnp.br/portal/tv/embed/10" title="Canal Saúde"><img src="imgs/saude.jpg" alt="" class="img-fluid"></button>
+        <h2 class="text-warning">Canais Religiosos</h2>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/-IdYYo68_to" title="Canção Nova"><img src="imgs/canta.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UCA0bOG0NUfJ855eDtHSxOkw&autoplay=true&mute=true&showinfo=false" title="RIT"><img src="imgs/rit.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://player.jmvstream.com/lvw/J26I8b4vr8H6MluwrZ7FvgEBC74Lca" title="TV Aparecida"><img src="imgs/aparecida.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UC-imeT_wWRmrpeYnhVX4r_g&autoplay=true&mute=true&showinfo=false" title="Rede Vida"><img src="imgs/vida.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/L3qysJe1US4" title="Boa Vontade TV"><img src="imgs/boa.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UC5UtCpmlRl32K9jKsOvQvkQ&autoplay=true&mute=true&showinfo=false" title="IMPD TV"><img src="imgs/impd.jpg" alt="" class="img-fluid"></button>
+        <h2 class="text-warning">Canais Jornalisticos</h2>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/ZZfVgVnnUpo" title="Record News"><img src="imgs/recordnews.png" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/VOw7bts_rGQ" title="EuroNews PT"><img src="imgs/euronews.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UCvdwhh_fDyWccR42-rReZLw&autoplay=true&mute=true&showinfo=false" title="CNN"><img src="imgs/cnn.jpg" alt="" class="img-fluid"></button>
+        <h2 class="text-warning">Canais Agrarios</h2>
+          <button class="btn btn-dark" name="https://player.band.com.br/aovivo/default_terraviva.asp?transmissao=terraviva-iptv" title="Terra Viva"><img src="imgs/terra.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://player.band.com.br/aovivo/?transmissao=agromais" title="Agro+"><img src="imgs/agro.png" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://equipea.com.br/player/?canal=canaldoboi" title="Canal do Boi"><img src="imgs/boi.jpg" alt="" class="img-fluid"></button>
+        <h2 class="text-warning">Canais Universitarios</h2>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UCBL2tfrwhEhX52Dze_aO3zA&autoplay=true&mute=true&showinfo=false" title="Univesp TV"><img src="imgs/univesp.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UC3HNOZ9zOHgTvpy30p6kH4w&autoplay=true&mute=true&showinfo=false" title="Canal Universitario de BH"><img src="imgs/cnu.png" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://playerv.transmissaodigital.com/video/ronald6259/2/true/false/VTNSdGRqRXVkSEpoYm5OdGFYTnpZVzlrYVdkcGRHRnNMbU52YlE9PSta/16:9/" title="TV Futura"><img src="imgs/futura.png" alt="" class="img-fluid"></button>
+        <h2 class="text-warning">Canais de Radio</h2> 
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UCbiGwU0-W1XCDUrt3BTVrag&autoplay=true&mute=true&showinfo=false" title="CBN"><img src="imgs/cbn.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/FPfg8iABK4w" title="Tupi"><img src="imgs/tupí.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UCP391YRAjSOdM_bwievgaZA&autoplay=true&mute=true&showinfo=false" title="Jovem Pan News"><img src="imgs/jovemnews.jpg" alt="" class="img-fluid"></button>
+          <button class="btn btn-dark" name="https://www.youtube.com/embed/live_stream?channel=UCv-Nx8pSfG_LxbViMz14RWQ&autoplay=true&mute=true&showinfo=false" title="Jovem Pan Esportes"><img src="imgs/jovemesportes.jpg" alt="" class="img-fluid"></button>
+          
+          button.btn.btn-dark[name=""]
+          button.btn.btn-dark[name=""]
+          button.btn.btn-dark[name=""]
+          button.btn.btn-dark[name=""]
+          button.btn.btn-dark[name=""]
+          button.btn.btn-dark[name=""]
+          button.btn.btn-dark[name=""]
+          button.btn.btn-dark[name=""]
+          button.btn.btn-dark[name=""]
+          button.btn.btn-dark[name=""]
+          button.btn.btn-dark[name=""]
+          button.btn.btn-dark[name=""]
+          button.btn.btn-dark[name=""]
+          
+          img.img-fluid[src="imgs/"]
+          img.img-fluid[src="imgs/"]
+          img.img-fluid[src="imgs/"]
+          img.img-fluid[src="imgs/"]
+          img.img-fluid[src="imgs/"]
+          img.img-fluid[src="imgs/"]
+          img.img-fluid[src="imgs/"]
+          img.img-fluid[src="imgs/"]
+          img.img-fluid[src="imgs/"]
+          img.img-fluid[src="imgs/"]
+
+      </section>
+    </div>
+
+  </div>
+  
+  
+
+
+
     
-
-    <!-- Tv Universitaria
-    <iframe src="https://www.youtube.com/embed/live_stream?channel=UC-lh3O914E8ajUVBOaacJRw" frameborder="0"></iframe>
-    Mega Tv (?)
-    <iframe src="https://www.youtube.com/embed/live_stream?channel=UCNY8yHMcFg0jLt0xJWCfuGA" frameborder="0"></iframe>
-    Canal do boi
-    <iframe src="https://equipea.com.br/player/?canal=canaldoboi" frameborder="0"></iframe>
-    Boa Vontade Tv
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/L3qysJe1US4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    CNN 
-    <iframe src="https://www.youtube.com/embed/live_stream?channel=UCvdwhh_fDyWccR42-rReZLw" frameborder="0"></iframe> -->
-    
-    <!-- https://www.youtube.com/embed/live_stream?channel=()&autoplay=true&mute=true&showinfo=false -->
-
-   <!-- Rede União
-   <iframe src="https://playerv.ifantasy.com.br/video/admin/1/true/false/V1hwT1UyUkhVbkZTV0ZacVRUQnZlVmxXWkZwa1ZtdDVUMWhSUFE9PStS/16:9/" frameborder="0"></iframe>
-   Canal FDR (Afiliado Futura)
-   <iframe src="https://playerv.transmissaodigital.com/video/ronald6259/2/true/false/VTNSdGRqRXVkSEpoYm5OdGFYTnpZVzlrYVdkcGRHRnNMbU52YlE9PSta/16:9/" frameborder="0"></iframe>
-   Tv Tiradentes (todo dia um novo canal diferente, sifude)
-   <iframe src="https://playerv.videovox.pw/video/edoardo5672/1/true/false/serv3.videovox.pw/4:3/" frameborder="0"></iframe>
-   Bah Tv (la do RS)
-   <iframe src="https://player.jmvstream.com/lvw/fMOAsM9755sRSIQBsLydEMR3MQMhns" frameborder="0"></iframe>
-   Tv Urbana (mais um...)
-   <iframe src="http://www.tvuplay.tv.br/" frameborder="0"></iframe> -->
-
-   <!-- Tv Pampa (Rede TV)
-   <iframe src="http://player.logicahost.com.br/player.php?player=377" frameborder="0"></iframe> -->
-
-
-    <!-- Canais Pluto Tv -->
-    <!-- Paramount Plus
-    <iframe src="https://pluto.tv/live-tv/paramount-apresenta" frameborder="0"></iframe>
-    Bet (Black Entertainment Television)
-    <iframe src="https://pluto.tv/live-tv/bet-pluto-tv-ptv1" frameborder="0"></iframe>
-    Nick Classicos
-    <iframe src="https://pluto.tv/live-tv/nick-classico-ptv1" frameborder="0"></iframe>
-    Nick Jr. Club 
-    <iframe src="https://pluto.tv/live-tv/nick-jr-club-1" frameborder="0"></iframe>
-    Tastemade Brasil
-    <iframe src="https://pluto.tv/live-tv/tastemade-ptv2" frameborder="0"></iframe>
-    fashionBox
-    <iframe src="https://pluto.tv/live-tv/fashionbox" frameborder="0"></iframe>
-    Loupe
-    <iframe src="https://pluto.tv/live-tv/loupe-ptv2" frameborder="0"></iframe>
-    Porta dos Fundos Fodasse
-    <iframe src="https://pluto.tv/live-tv/porta-dos-fundos" frameborder="0"></iframe> -->
-
-
-    <!-- Babyfirst
-    <iframe src="https://pluto.tv/live-tv/babyfirst-ptv1" frameborder="0"></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ABVQXgr2LW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-    
-
-
-    <!-- Experimentando playlists -->
-    <!-- <iframe src="http://www.youtube.com/embed?listType=playlist&list=PLhQTgJ8wVv-nSjTi5jGdTyT_buM23l12o" frameborder="0"></iframe> -->
-    
-        <!-- Add a placeholder for the Twitch embed -->
-        <div id="twitch-embed"></div>
-        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-        <script type="text/javascript">
-          new Twitch.Embed("twitch-embed", {
-            width: 854,
-            height: 480,
-            channel: "tvterradosol",
-            // Only needed if this page is going to be embedded on other websites
-            // parent: ["embed.example.com", "othersite.example.com"]
-          });
-        </script>
-        
-        <iframe src="https://player.twitch.tv/?channel=tvterradosol&parent=julius-legendas.github.io&muted=true" frameborder="0"></iframe>
-
-
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                // Mudar o Iframe
+                let linke = $(this).attr("name");
+                $("#live").attr("src", linke);
+                // Mudar o nome. Precisa ver isso dps de colocar as imgs!
+                let agora = $(this).attr("title");
+                $("#agora").text(agora)
+            })
+        })
+    </script>
 </body>
 </html>
